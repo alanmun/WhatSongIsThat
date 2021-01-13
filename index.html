@@ -7,8 +7,7 @@
 <h2 id="song">Here's what I found: </h2>
 <h3 id="artist">By: </h3>
 </div>
-<iframe src="">
-</iframe>
+<iframe src=""></iframe>
 
 <p>Not the right result? The bot can get the wrong answer for various reasons:</p>
 <ul>
@@ -16,13 +15,13 @@
 <li>Another</li>
 </ul>
 <script>
-# running on https://www.example.com?name=n1&name=n2
+// running on https://www.example.com?name=n1&name=n2
 let params = new URLSearchParams(location.search);
-#params.get('name') # => "n1"
-var songname = params.get('s'); #Extract song name
-var songartist = params.get('a'); #Extract artist name
-var songyoutube = params.get('y'); #Youtube url hash
-#params.getAll('name') # => ["n1", "n2"]
+//params.get('name') # => "n1"
+var songname = params.get('s'); //Extract song name
+var songartist = params.get('a'); //Extract artist name
+var songyoutube = params.get('y'); //Youtube url hash
+//params.getAll('name') # => ["n1", "n2"]
 
 songname = "placeholder songname";
 songartist = "placeholder artist";
