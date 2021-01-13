@@ -18,4 +18,9 @@
 <li>Another</li>
 </ul>
 <script>
+# running on https://www.example.com?name=n1&name=n2
+let params = new URLSearchParams(location.search);
+params.get('name') # => "n1"
+params.getAll('name') # => ["n1", "n2"]
+
 </script>
