@@ -20,12 +20,14 @@ layout: default
     var songartist = params.get('a'); //Extract artist name
     var songyoutube = params.get('y'); //Youtube url hash
 
-    if songyoutube === null:
+    if songyoutube === null {
       document.getElementById("result").style.visibility = "hidden";
-    else:
+    }
+    else {
       songname = "I think its: " + songname;
       songartist = "By: " + songartist;
       songyoutube = "https://youtube.com/embed/" + songyoutube;
+    }
     document.getElementById("song").innerHTML = songname;
     document.getElementById("artist").innerHTML = songartist;
     document.getElementById("youtube").src = songyoutube;
