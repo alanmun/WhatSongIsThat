@@ -21,7 +21,7 @@ layout: default
     var songyoutube = params.get('y'); //Youtube url hash
 
     if songyoutube is null:
-      document.getElementById("result").style = "display:none";
+      document.getElementById("result").style.visibility = "hidden";
     else:
       songname = "I think its: " + songname;
       songartist = "By: " + songartist;
