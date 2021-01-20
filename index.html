@@ -1,34 +1,34 @@
-<head>
-<title> What Song Is This? </title>
-</head>
+---
+layout: default
+---
 
 <body>
-<div>
-<h2 id="song">Here's what I found: </h2>
-<h3 id="artist">By: </h3>
-</div>
-<iframe id="youtube" src=""></iframe>
+  <div>
+    <h2 id="song">Here's what I found: </h2>
+    <h3 id="artist">By: </h3>
+    <iframe id="youtube" src=""></iframe>
+  </div>
 
-<p>Not the right result? The bot can get the wrong answer for various reasons:</p>
-<ul>
-<li><b>Bad Timestamp:</b> by default, the bot checks the middle of your video. You can try again with a specific time to tell it to check like "@watsongisthis 0:14"</li>
-<li><b>Unpublished song:</b> My bot can't find anything that isn't published, like any underground artist's music.</li>
-</ul>
-<script>
-let params = new URLSearchParams(location.search);
-var songname = params.get('s'); //Extract song name
-var songartist = params.get('a'); //Extract artist name
-var songyoutube = params.get('y'); //Youtube url hash
+  <p>Not the right result? The bot can get the wrong answer for various reasons:</p>
+  <ul>
+    <li><b>Bad Timestamp:</b> by default, the bot checks the middle of your video. You can try again with a specific time to tell it to check like "@watsongisthis 0:14"</li>
+    <li><b>Unpublished song:</b> My bot can't find anything that isn't published, like any underground artist's music.</li>
+  </ul>
+  <script>
+    let params = new URLSearchParams(location.search);
+    var songname = params.get('s'); //Extract song name
+    var songartist = params.get('a'); //Extract artist name
+    var songyoutube = params.get('y'); //Youtube url hash
 
-songname = "I think its: " + songname;
-songartist = "By: " + songartist;
-songyoutube = "https://youtube.com/embed/" + songyoutube;
-document.getElementById("song").innerHTML = songname;
-document.getElementById("artist").innerHTML = songartist;
-document.getElementById("youtube").src = songyoutube;
+    songname = "I think its: " + songname;
+    songartist = "By: " + songartist;
+    songyoutube = "https://youtube.com/embed/" + songyoutube;
+    document.getElementById("song").innerHTML = songname;
+    document.getElementById("artist").innerHTML = songartist;
+    document.getElementById("youtube").src = songyoutube;
 
-//alert(location.search);
-</script>
+    //alert(location.search);
+  </script>
 
 </body>
 
