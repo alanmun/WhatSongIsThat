@@ -6,7 +6,7 @@ layout: default
   <div id="result">
     <h2 id="song">Here's what I found: </h2>
     <h3 id="artist">By: </h3>
-    <iframe id="youtube" src="" align="center"><iframe>
+    <iframe id="youtube" src=""><iframe>
 
     <p>Not the right result? The bot can get the wrong answer for various reasons:</p>
     <ul>
@@ -22,8 +22,10 @@ layout: default
     var songartist = params.get('a'); //Extract artist name
     var songyoutube = params.get('y'); //Youtube url hash
 
+    alert("???")
+
     if (songyoutube === null) {
-      document.getElementById("result").style.visibility = "hidden";
+      //document.getElementById("result").style.visibility = "hidden";
       alert();
     }
     else {
