@@ -4,8 +4,8 @@ layout: default
 
 <body>
   <div id="result">
-    <h2>I think its: <p id="song" style="color: #dbcc2a"></p></h2>
-    <h3>By: <p id="artist" style="color: #33ded5"></p></h3>
+    <h3>I think its: <h1 id="song" style="color: #dbcc2a"></h1></h3>
+    <h4>By: <h1 id="artist" style="color: #33ded5"></h1></h4>
     <iframe id="youtube" src=""></iframe>
 
     <p>Not the right result? There are various reasons why the bot could get it wrong:</p>
@@ -26,6 +26,8 @@ layout: default
       document.getElementById("result").style.visibility = "hidden";
     }
     else {
+      songname = "     " + songname
+      songartist = "     " + songartist
       songyoutube = "https://youtube.com/embed/" + songyoutube;
     }
     document.getElementById("song").innerHTML = songname; //songname;
