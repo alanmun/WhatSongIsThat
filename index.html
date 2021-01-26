@@ -4,11 +4,11 @@ layout: default
 
 <body>
   <div id="result">
-    <h2 id="song">Here's what I found: </h2>
-    <h3 id="artist">By: </h3>
+    <h2>I think its: <p id="song" style="color: #dbcc2a"></p></h2>
+    <h3>By: <p id="artist" style="color: #33ded5"></p></h3>
     <iframe id="youtube" src=""></iframe>
 
-    <p>Not the right result? The bot can get the wrong answer for various reasons:</p>
+    <p>Not the right result? There are various reasons why the bot could get it wrong:</p>
     <ul>
       <li><b>Bad Timestamp:</b> By default, the bot checks the middle of your video. You can try again with a specific time to tell it to check like "@watsongisthis 0:14"</li>
       <li><b>Unpublished song:</b> My bot can't find anything that hasn't yet been published, like any underground artist's music.</li>
@@ -26,8 +26,6 @@ layout: default
       document.getElementById("result").style.visibility = "hidden";
     }
     else {
-      songname = "I think its: " + songname;
-      songartist = "By: " + songartist;
       songyoutube = "https://youtube.com/embed/" + songyoutube;
     }
     document.getElementById("song").innerHTML = songname; //songname;
