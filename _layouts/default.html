@@ -9,6 +9,7 @@
 
 {% seo %}
 	<meta property="og:image" content="{% if img_src %}{{ img_src }}{% else %}{{ site.icon }}{% endif %}">
+	<meta name="twitter:image" content="{% if img_src %}{{ img_src }}{% else %}{{ site.icon }}{% endif %}">
 	<!-- ^^^ Open Graph, for facebook, twitter, and others -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
@@ -26,7 +27,6 @@
 	<meta name="theme-color" content="#ffffff">
 	<!-- End favicons related tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!-- <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1318687416581054469/gkdv0hmd_400x400.jpg"> Not Needed -->
 
   </head>
   <body>
