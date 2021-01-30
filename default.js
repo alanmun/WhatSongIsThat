@@ -1,5 +1,5 @@
-let params = new URLSearchParams(location.search);
-var hash = params.get('y'); //Youtube url hash
+let params2 = new URLSearchParams(location.search);
+var hash = params2.get('y'); //Youtube url hash
 
 var youtubelink = "https://www.youtube.com/watch?v=" + hash;
 
