@@ -14,5 +14,3 @@ else {
 document.getElementById("song").innerHTML = songname; //songname;
 document.getElementById("artist").innerHTML = songartist; //songartist;
 document.getElementById("youtube").src = songyoutube;
-
-//alert(location.search);
