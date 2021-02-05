@@ -1,7 +1,7 @@
 let params2 = new URLSearchParams(location.search);
 var hash = params2.get('y'); //Youtube url hash
 
-var youtubelink = "https://www.youtube.com/watch?v=" + hash;
+var video_thumbnail = "img.youtube.com/vi/" + hash + "/0.jpg"
 
 if(hash != null){
 	//hash was defined and we can try to update the content property of the meta tag on default.html
