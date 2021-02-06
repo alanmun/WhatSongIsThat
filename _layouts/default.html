@@ -7,7 +7,7 @@
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 {% seo %}
-	<meta property="og:image" content="{% if img_src %}{{ img_src }}{% else %}{{ site.icon }}{% endif %}">
+	<meta property="og:image" content="{% if img_src %}{{ img_src }}{% else %}{{ site.icon }}{% endif %}" width="360" height="360">
 	<meta name="twitter:image" content="{% if img_src %}{{ img_src }}{% else %}{{ site.icon }}{% endif %}">
 	<!-- ^^^ Open Graph, for facebook, twitter, and others -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
