@@ -4,7 +4,7 @@ var songartist = params.get('a'); //Extract artist name
 var songyoutube = params.get('y'); //Youtube url video ID
 
 if (songyoutube === null) {
-	document.getElementById("result").style.visibility = "hidden";
+	document.getElementById("result").style.display = "none";
 }
 else {
 	songname = "     " + songname
@@ -15,5 +15,5 @@ else {
 	document.getElementById("artist").innerHTML = songartist;
 	document.getElementById("youtube").src = songyoutube;
 
-	document.getElementById("showOnlyOnHome").style.visibility = "hidden";
+	document.getElementById("showOnlyOnHome").style.display = "none";
 }
