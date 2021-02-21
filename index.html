@@ -3,18 +3,40 @@ layout: default
 ---
 
 <body>
-  <div id="result">
-    <h3 style="color: #ffffff;">I think its: <h1 id="song" style="color: #dbcc2a;"></h1></h3>
-    <h4 style="color: #ffffff;">By: <h1 id="artist" style="color: #33ded5;"></h1></h4>
-    <iframe id="youtube" src="" style="border:0; width:100%; height: 500px;"></iframe>
+	<div id="result">
+		<h3 style="color: #ffffff;">I think its: <h1 id="song" style="color: #dbcc2a;"></h1></h3>
+		<h4 style="color: #ffffff;">By: <h1 id="artist" style="color: #33ded5;"></h1></h4>
+		<iframe id="youtube" src="" style="border:0; width:100%; height: 500px;"></iframe>
 
-    <p>Not the right result? Here are some reasons why the bot could get it wrong:</p>
-    <ul>
-      <li><b>Bad Timestamp:</b> By default, the bot checks the middle of your video. You can try again with a specific time to tell it to check like "@watsongisthis 0:14"</li>
-      <li><b>Unpublished song:</b> My bot can't find anything that hasn't yet been published, like any underground artist's music.</li>
-      <li><b>Samples:</b> If the bot looks at a less than ideal point in the song, it may accidentally find the original song that your song sampled. Conversely, someone might have sampled the song you are looking for, and that can end up being the result. Try a different timestamp.</li>
-      <li><b>Too much noise:</b> If there's too much background noise, or even two songs are playing at the same time, it could affect the song result.</li>
-    </ul>
-  </div>
-  <script type="text/javascript" src="index.js"> </script>
+		<b>Not quite the right result? Here are some troubleshooting tips:</b>
+		<ul>
+			<li><b>It Might Not Be All Wrong:</b> Sometimes, the bot might find the wrong song name and artist, but get the right YouTube video. Sometimes, it does the exact opposite. If the video doesn't seem quite right and the song name and artist are different, try to google to song name and artist. </li>
+
+			<li><b>Bad Timestamp:</b> By default, the bot checks the middle of your video. You can try again with a specific time to tell it to check, such as "@watsongisthis 0:14"</li>
+
+			<li><b>Samples:</b> If the bot looks at a less than ideal point in the song, it may accidentally find the original song that your song sampled. Conversely, someone might have sampled the song you are looking for, and that can end up being the result. Try a different timestamp.</li>
+		</ul>
+	</div>
+	<div id="showOnlyOnHome">
+		<h3>What is this?</h3>
+		<p>What song is that? (@watsongisthis) is a twitter bot I developed that uses Shazam's API to discover songs for you on twitter. </p>
+
+		<h3>How do I use the bot?</h3>
+		<p>Currently there are two ways to use the bot. You can either post a video yourself and mention @watsongisthis in the tweet to request it's help, or reply directly to a video with "@watsongisthis" and my bot will try to find it for you.
+		<br>
+		You can also supply an optional timestamp. For example, if you know your song happens around 20 seconds into the video, do "@watsongisthis 0:20".
+		</p>
+
+
+		<h3>Why didn't the bot work for my song request?</h3>
+		<b>There are a lot of reasons a song request outright fails. I've come up with a few reasons I've discovered below:</b>
+		<ul>
+			<li><b>Unpublished Song:</b> My bot can't find anything that hasn't yet been published. If it's not on Spotify or Apple Music, it most likely won't be found.</li>
+
+			<li><b>Too much noise:</b> If there's too much background noise, or even two songs are playing at the same time, it could affect my bot's ability to detect it.</li>
+
+			<li><b>Too much editing:</b> If there's too much editing to the original song, such as your song being turned into an unofficial nightcore remix, it could affect my bot's ability to detect it.</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="index.js"> </script>
 </body>
