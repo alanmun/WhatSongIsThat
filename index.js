@@ -1,7 +1,12 @@
 let params = new URLSearchParams(location.search);
 var songname = params.get('s'); //Extract song name
 var songartist = params.get('a'); //Extract artist name
+var songdate = params.get('d'); //Extract possible date
 var songyoutube = params.get('y'); //Youtube url video ID
+
+if (songdate === ""){ //No date was provided
+	document.getElementById('dateholder').style.display = "none"; //Hide it if no date available
+}
 
 if (songyoutube === null) {
 	document.getElementById("result").style.display = "none";
@@ -11,20 +16,22 @@ if (songyoutube === null) {
 
 	songname = "     " + songname;
 	songartist = "     " + songartist;
-	songyoutube = "https://youtube.com/embed/" + songyoutube;
+	songdate = "     " + songdate;
 
 	document.getElementById("song").innerHTML = songname;
 	document.getElementById("artist").innerHTML = songartist;
-	document.getElementById("youtube").src = songyoutube;
+	document.getElementById("date").innerHTML = songdate;
 
 	document.getElementById("showOnlyOnHome").style.display = "none";
 } else {
 	songname = "     " + songname;
 	songartist = "     " + songartist;
+	songdate = "     " + songdate;
 	songyoutube = "https://youtube.com/embed/" + songyoutube;
 
 	document.getElementById("song").innerHTML = songname;
 	document.getElementById("artist").innerHTML = songartist;
+	document.getElementById("date").innerHTML = songdate;
 	document.getElementById("youtube").src = songyoutube;
 
 	document.getElementById("showOnlyOnHome").style.display = "none";
