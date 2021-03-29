@@ -7,10 +7,10 @@ if (songyoutube === null) {
 	document.getElementById("result").style.display = "none";
 } else if (songyoutube === "?") {
 	document.getElementById("youtube").style.display = "none"; //Hide the video since its nonexistent
-	docuument.getElementById('novid').innerHTML = "No video was found on YouTube for this song result."
-	
-	songname = "     " + songname
-	songartist = "     " + songartist
+	document.getElementById('novid').innerHTML = "No video was found on YouTube for this song result.";
+
+	songname = "     " + songname;
+	songartist = "     " + songartist;
 	songyoutube = "https://youtube.com/embed/" + songyoutube;
 
 	document.getElementById("song").innerHTML = songname;
@@ -19,8 +19,8 @@ if (songyoutube === null) {
 
 	document.getElementById("showOnlyOnHome").style.display = "none";
 } else {
-	songname = "     " + songname
-	songartist = "     " + songartist
+	songname = "     " + songname;
+	songartist = "     " + songartist;
 	songyoutube = "https://youtube.com/embed/" + songyoutube;
 
 	document.getElementById("song").innerHTML = songname;
