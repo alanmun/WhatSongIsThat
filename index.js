@@ -5,8 +5,10 @@ var songyoutube = params.get('y'); //Youtube url video ID
 
 if (songyoutube === null) {
 	document.getElementById("result").style.display = "none";
-}
-else {
+} else if (songyoutube === "?") {
+	document.getElementById("youtube").style.display = "none"; //Hide the video since its nonexistent
+	docuument.getElementById('novid').innerHTML = "No video was found on YouTube for this song result."
+} else {
 	songname = "     " + songname
 	songartist = "     " + songartist
 	songyoutube = "https://youtube.com/embed/" + songyoutube;
