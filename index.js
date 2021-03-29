@@ -4,7 +4,7 @@ var songartist = params.get('a'); //Extract artist name
 var songdate = params.get('d'); //Extract possible date
 var songyoutube = params.get('y'); //Youtube url video ID
 
-if (songdate === ""){ //No date was provided
+if (songdate === "" || songdate === null){ //No date was provided. Should be "", but null is checked as well for backwards compatibility
 	document.getElementById('dateholder').style.display = "none"; //Hide it if no date available
 }
 
